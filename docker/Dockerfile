@@ -8,6 +8,8 @@ RUN bundle install
 
 RUN bundle exec rake build -t -v
 
+RUN gem install fluent-plugin-parser-cri --no-document
+
 FROM registry.access.redhat.com/ubi8/ruby-27
 
 ARG VERSION
